@@ -4,14 +4,14 @@ import axios from 'axios'
 class App extends React.Component {
   send = () => {
     axios.post('http://api.cloudstitch.com/levkus/wedding', {
-      Name: 'LALALA',
-      Subject: 'Olalal',
-      Message: 'LolOll'
+      name: 'LALALA',
+      status: 'Olalal',
     }).then(resp => console.log(resp))
   }
 
   get = () => {
-    axios.get('http://api.cloudstitch.com/levkus/wedding').then(resp => console.log(resp))
+    const resp = require('../json/API Spreadsheet.json')
+    console.log(resp)
   }
 
   render () {
