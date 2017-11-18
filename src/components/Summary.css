@@ -1,0 +1,51 @@
+.summary {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+
+.summary-date {
+  margin-bottom: 40px;
+}
+
+.summary-list-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  padding: 10px 0;
+}
+
+.summary-list-header-item {
+  flex: 1 1 50%;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+}
+
+.summary-item {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+}
+
+.summary-item:hover {
+  color: #1565C0;
+  cursor: default;
+}
+
+.summary-name {
+  flex: 1 1 50%;
+  color: inherit;
+  cursor: inherit;
+}
+
+.summary-status {
+  flex: 1 1 50%;
+  color: inherit;
+  cursor: inherit;
+}
