@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Loader from './Loader'
-import { read } from '../endpoints'
+import Loader from '../Loader/Loader'
 import './Summary.css'
 
 class Summary extends Component {
@@ -9,7 +8,7 @@ class Summary extends Component {
     people: []
   }
   componentWillMount = () => {
-    axios.get(read).then(response => {
+    axios.get(process.env.REACT_APP_READ).then(response => {
       this.setState({ people: response.data.people })
     })
   }

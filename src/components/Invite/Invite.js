@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
-import aliases from '../aliases'
-import { write } from '../endpoints'
-import Card from './Card'
+import aliases from '../../aliases'
+import Card from '../Card/Card'
 
 export default class Invite extends Component {
 
@@ -24,7 +23,7 @@ export default class Invite extends Component {
       name: alias.name,
       status: type
     }
-    axios.post(write, feedback).then(() => {
+    axios.post(process.env.REACT_APP_WRITE, feedback).then(() => {
       this.setState({ submitted: true })
     })
   }

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
-import Invite from './Invite'
-import Thanks from './Thanks'
-import Summary from './Summary'
+import Invite from './Invite/Invite'
+import Thanks from './Thanks/Thanks'
+import Summary from './Summary/Summary'
 
 const App = () => (
   <main>
