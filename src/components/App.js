@@ -6,14 +6,12 @@ import Thanks from './Thanks/Thanks'
 import Summary from './Summary/Summary'
 
 const App = () => (
-  <main>
-    <Switch>
-      <Route exact path='/' component={Home} />
-      <Route exact path='/summary' component={Summary} />
-      <Route exact path='/thanks' component={Thanks} />
-      <Route path='/invite/:id' component={Invite} />
-    </Switch>
-  </main>
+  <Switch>
+    <Route exact path='/' component={Home} />
+    <Route exact path='/summary' component={Summary} />
+    <Route exact path='/thanks' component={Thanks} />
+    <Route path='/invite/:alias' component={Invite} />
+  </Switch>
 )
 
 export default App

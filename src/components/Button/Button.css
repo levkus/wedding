@@ -1,0 +1,17 @@
+.button {
+  padding: 10px;
+  border: 1px solid #0097A7;
+  background: transparent;
+  border-radius: 0;
+  color: #0097A7;
+  transition: .3s;
+}
+
+.button:not(:last-child) {
+  margin-right: 30px;
+}
+
+.button:hover {
+  background-color: #0097A7;
+  color: #fff;
+}

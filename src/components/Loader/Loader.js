@@ -1,8 +1,8 @@
 import React from 'react'
 import './Loader.css'
 
-const Loader = () => (
-  <div className='loader__container'>
+const Loader = ({ fullscreen }) => (
+  <div className={fullscreen ? 'loader-fullscreen' : 'loader-simple'}>
     <div className='spinner'>
       <div className='bounce1' />
       <div className='bounce2' />

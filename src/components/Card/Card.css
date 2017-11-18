@@ -1,0 +1,54 @@
+.card {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, .3);
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+}
+
+.card-header {
+  font-family: 'VenskisadOne-Medium';
+  font-size: 40px;
+  margin-bottom: 40px;
+  line-height: 40px;
+}
+
+.card-text {
+  margin-bottom: 40px;
+}
+
+.card-details {
+  margin-bottom: 40px;
+  width: 70%;
+  align-self: flex-end;
+}
+
+.card-detail {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.card-detail:last-child {
+  margin-bottom: 0;
+}
+
+.card-data {
+  width: 250px;
+  border-bottom: 1px solid #000;
+  text-align: right;
+}
+
+.card-signature {
+  font-family: 'VenskisadOne-Medium';
+  font-size: 30px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.card-buttons {
+
+}

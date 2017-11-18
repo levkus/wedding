@@ -1,0 +1,13 @@
+.invite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+@media (max-width: 640px) {
+  .invite {
+    padding: 10px;
+  }
+}

@@ -1,9 +1,29 @@
+@font-face {
+  font-family: 'VenskisadOne-Medium';
+  src: url('./assets/fonts/VenskisadOne-Medium.woff') format('woff'),
+       url('./assets/fonts/VenskisadOne-Medium.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #eee;
+  background-color: #f3f3f3;
   font-family: 'Courier New';
+  color: #646464;
 }
 
 h1 {
   margin-top: 0;
   margin-bottom: 40px;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

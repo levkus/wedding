@@ -1,22 +1,42 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Loader from '../Loader/Loader'
+import Error from '../Error/Error'
+import uniqBy from 'lodash/uniqBy'
 import './Summary.css'
 
 class Summary extends Component {
   state = {
+    loading: false,
+    error: false,
     people: []
   }
+
   componentWillMount = () => {
-    axios.get(process.env.REACT_APP_READ).then(response => {
-      this.setState({ people: response.data.people })
+    this.setState({ loading: true })
+    axios.get('https://cors.io/?' + process.env.REACT_APP_READ + 'people').then(res => {
+      if (!res.data.people) {
+        this.setState({
+          error: 'Никто пока не ответил :(',
+          loading: false,
+        })
+      } else {
+        const people = uniqBy(res.data.people.reverse(), 'name')
+        this.setState({
+          people,
+          loading: false,
+        })
+      }
+    }, error => {
+      console.warn(error)
+      this.setState({
+        error: 'Не получилось загрузить данные, попробуй позже.',
+        loading: false
+      })
     })
   }
 
   renderList = () => {
-    if (this.state.people.length === 0) {
-      return <Loader />
-    }
     return this.state.people.map((item, index) => (
       <li className='summary-item' key={index}>
         <div className='summary-name'>{item.name}</div>
@@ -26,6 +46,12 @@ class Summary extends Component {
   }
 
   render () {
+    const { loading, error } = this.state
+    if (loading) {
+      return <Loader fullscreen />
+    } else if (error) {
+      return <Error text={error} />
+    }
     return (
       <div className='summary'>
         <h1>Список</h1>
