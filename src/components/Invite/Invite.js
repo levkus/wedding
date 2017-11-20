@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom'
 import Card from '../Card/Card'
 import Button from '../Button/Button'
 import Loader from '../Loader/Loader'
+import Envelope from '../Envelope/Envelope'
 import Error from '../Error/Error'
 
 import './Invite.css'
@@ -78,17 +79,19 @@ export default class Invite extends Component {
     } else if (error) {
       return <Error text={error} />
     } else if (submitted) {
-      return <Redirect to='/thanks' />
+      return <Redirect to='/thanks' push />
     }
     const { text, signature } = alias
     return(
       <div className='invite'>
-        <Card
-          renderHeader={this.renderHeader}
-          renderButtons={this.renderButtons}
-          text={text}
-          signature={signature}
-        />
+        <Envelope>
+          <Card
+            renderHeader={this.renderHeader}
+            renderButtons={this.renderButtons}
+            text={text}
+            signature={signature}
+          />
+        </Envelope>
       </div>
     )
   }

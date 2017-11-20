@@ -14,7 +14,7 @@ class Summary extends Component {
 
   componentWillMount = () => {
     this.setState({ loading: true })
-    axios.get('https://cors.io/?' + process.env.REACT_APP_READ + 'people').then(res => {
+    axios.get(process.env.REACT_APP_READ + 'people').then(res => {
       if (!res.data.people) {
         this.setState({
           error: 'Никто пока не ответил :(',

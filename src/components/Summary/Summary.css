@@ -1,7 +1,7 @@
 .summary {
   max-width: 600px;
   margin: 40px auto;
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, .8);
   padding: 40px;
   background: #fff;
 }
@@ -41,7 +41,7 @@
 }
 
 .summary-item:hover {
-  color: #1565C0;
+  color: #74BAB4;
   cursor: default;
 }
 

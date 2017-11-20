@@ -10,33 +10,59 @@
   justify-content: center;
 }
 
-.spinner {
-  width: 70px;
-  text-align: center;
+.rings-container {
+  /*transform: rotateY(60deg);*/
 }
 
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-
-  border-radius: 100%;
-  display: inline-block;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+.ring {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.spinner .bounce1 {
-  animation-delay: -0.32s;
+.ring.blue-back {
+  stroke: rgba(153 ,232, 226, 0.4);
+  stroke-width: 2;
 }
 
-.spinner .bounce2 {
-  animation-delay: -0.16s;
+.ring.blue-front {
+  stroke: #99E8E2;
+  stroke-dasharray: 32 32;
+  animation: dash 2s linear infinite;
+  transform-origin: center;
+  stroke-width: 4;
+  opacity: 0;
 }
 
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    transform: scale(0);
-  } 40% {
-    transform: scale(1.0);
+.ring.red-back {
+  stroke: rgba(255, 0, 0, 0.4);
+  stroke-width: 2;
+}
+
+.ring.red-front {
+  stroke: red;
+  stroke-dasharray: 10 200;
+  animation: dash 2s linear infinite 0.2s;
+  transform-origin: center;
+  opacity: 0;
+  /*stroke-width: 8;*/
+}
+
+@keyframes dash {
+  0% {
+    transform: rotate(0deg);
+    /*stroke-dasharray: 10px 10px;*/
+    stroke-width: 0;
+    opacity: 0;
+  }
+  50% {
+    stroke-width: 4;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    /*stroke-dasharray: 100px 400px;*/
+    opacity: 0;
+    stroke-width: 0;
   }
 }

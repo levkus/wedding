@@ -3,7 +3,6 @@ import './Thanks.css'
 
 const Thanks = () => (
   <div className='thanks'>
-    <div className='thanks-text'>Спасибо!</div>
     <div className='thanks-text'>Мы все записали :)</div>
     <div className='thanks-gif-container'>
       <iframe

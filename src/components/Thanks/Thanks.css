@@ -6,6 +6,8 @@
   align-items: center;
   text-align: center;
   padding: 40px;
+  color: #74BAB4;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .thanks-text {
