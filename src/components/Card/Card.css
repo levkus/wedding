@@ -74,6 +74,21 @@
   text-align: right;
 }
 
+.card-brackets {
+  color: #bbb;
+  margin-left: 5px;
+}
+
+.card-place-link {
+  color: #74BAB4;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.card-place-link:hover {
+  color: #E48687;
+}
+
 .card-signature {
   font-family: 'VenskisadOne-Medium';
   font-size: 30px;

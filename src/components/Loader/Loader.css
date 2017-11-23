@@ -35,12 +35,12 @@
 }
 
 .ring.red-back {
-  stroke: rgba(255, 0, 0, 0.4);
+  stroke: rgba(228, 134, 135, 0.4);
   stroke-width: 2;
 }
 
 .ring.red-front {
-  stroke: red;
+  stroke: #E48687;
   stroke-dasharray: 10 200;
   animation: dash 2s linear infinite 0.2s;
   transform-origin: center;
