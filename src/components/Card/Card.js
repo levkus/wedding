@@ -3,6 +3,8 @@ import './Card.css'
 
 const Card = ({ renderHeader, renderButtons, text, signature }) => (
   <div className='card'>
+    <div className='card-top-diamond' />
+    <div className='card-bottom-diamond' />
     <div className='card-top' />
     <div className='card-bottom' />
     <div className='card-wrap' />
