@@ -5,6 +5,7 @@ import Invite from './Invite/Invite'
 import Thanks from './Thanks/Thanks'
 import Summary from './Summary/Summary'
 import Links from './Links/Links'
+import Info from './Info/Info'
 
 const App = () => (
   <Switch>
@@ -12,6 +13,7 @@ const App = () => (
     <Route exact path='/summary' component={Summary} />
     <Route exact path='/links' component={Links} />
     <Route exact path='/thanks' component={Thanks} />
+    <Route exact path='/info' component={Info} />
     <Route path='/invite/:alias' component={Invite} />
   </Switch>
 )

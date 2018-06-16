@@ -166,6 +166,22 @@
   margin-bottom: 60px;
 }
 
+.card-link {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.card-link a {
+  color: #74BAB4;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.card-link a:hover {
+  color: #E48687;
+}
+
 @media (max-width: 640px) {
   .card {
     padding: 20px 20px 120px;

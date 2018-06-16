@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Card.css'
 
 const Card = ({ renderHeader, renderButtons, text, signature }) => (
@@ -30,7 +31,7 @@ const Card = ({ renderHeader, renderButtons, text, signature }) => (
     <div className='card-separator-two' />
     <div className='card-before-buttons'>Внимание! Выбор правильной кнопочки нам очень поможет:</div>
     <div className='card-buttons'>{renderButtons()}</div>
-    <div className='card-thanks'>Подсказка: первая кнопка - всегда отличный выбор.</div>
+    <div className='card-link'><Link to='/info'>Полезная информация</Link></div>
   </div>
 )
 

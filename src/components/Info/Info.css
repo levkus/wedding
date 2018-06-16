@@ -1,0 +1,39 @@
+.card.info {
+  max-width: 900px;
+}
+
+.info-text {
+  text-align: left;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+.info-text h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.info-text h2:first-child {
+  text-align: center;
+  margin-top: 0;
+}
+
+.info-text strong {
+  color: #74BAB4;
+  font-weight: 600;
+}
+
+.info-text img {
+  width: 100%;
+}
+
+.info-map-wrapper {
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.card-top-diamond.info {
+  background-size: cover;
+  background-position-y: 100%;
+}

@@ -21,7 +21,7 @@ export default class Invite extends Component {
   componentWillMount = () => {
     this.setState({ loading: true })
     axios.get(process.env.REACT_APP_READ + 'aliases').then(res => {
-      const alias = res.data.aliases.find(a => a.alias === this.props.match.params.alias)
+      const alias = res.data.data.find(a => a.alias === this.props.match.params.alias)
       if (!alias) {
         this.setState({
           loading: false,

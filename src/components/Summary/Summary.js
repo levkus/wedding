@@ -15,13 +15,13 @@ class Summary extends Component {
   componentWillMount = () => {
     this.setState({ loading: true })
     axios.get(process.env.REACT_APP_READ + 'people').then(res => {
-      if (!res.data.people) {
+      if (!res.data.data) {
         this.setState({
           error: 'Никто пока не ответил :(',
           loading: false,
         })
       } else {
-        const people = uniqBy(res.data.people.reverse(), 'name')
+        const people = uniqBy(res.data.data.reverse(), 'name')
         this.setState({
           people,
           loading: false,
